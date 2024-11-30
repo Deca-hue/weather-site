@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kenya Weather Forecast</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+
+
+  <div class="weather-container">
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search county (e.g., Nairobi)" />
+      <button onclick="fetchWeather()">Search</button>
+    </div>
+  
+    <!-- Loading Spinner -->
+    <div class="spinner" id="spinner"></div>
+  
+    <!-- Weather Card -->
+    <div class="weather-card">
+      <h2 id="city-name">Nairobi</h2>
+      <p id="local-time">Local Time: 12:00 PM</p> <!-- Local Time -->
+      <div class="current-weather">
+        <h1 id="temperature">25°C</h1>
+        <p id="description">Sunny</p>
+        <p id="wind">Wind: 12 km/h</p>
+        <div class="weather-icon">
+          <img id="icon" src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon">
+        </div>
+      </div>
+  
+      <!-- Forecast Options -->
+      <div class="forecast-options">
+        <button onclick="showHourly()">Hourly</button>
+        <button onclick="showDaily()">7-Day</button>
+      </div>
+  
+      <!-- Hourly Forecast -->
+      <div class="hourly-forecast" id="hourly"></div>
+  
+      <!-- 7-Day Forecast -->
+      <div class="daily-forecast" id="daily"></div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
